@@ -12,7 +12,12 @@ import localeEs from '@angular/common/locales/es';
 registerLocaleData(localeEs);
 
 export const apiRegistryConfig: Array<ApiInformationRegistryConfigSimple> = [
-  { cgdnCode: 'CGDNCODEAPI', version: '', allApikey: 'XXXXX-XXXX-XXXX-XXXX-XXXXXX', apikeyList: [] }
+  {
+    cgdnCode: 'CGDNCODEAPI',
+    version: '',
+    allApikey: 'XXXXX-XXXX-XXXX-XXXX-XXXXXX',
+    apikeyList: []
+  }
 ];
 
 @NgModule({
@@ -25,11 +30,9 @@ export const apiRegistryConfig: Array<ApiInformationRegistryConfigSimple> = [
     ApiRegistryModule.forRoot(apiRegistryConfig),
     IntranetModule.forRoot(),
     ApplicationManifestModule.forRoot(),
-    BasicHttpClientModule,
+    BasicHttpClientModule
   ],
-  providers: [
-    { provide: LOCALE_ID, useValue: 'es-ES' },
-  ],
+  providers: [{ provide: LOCALE_ID, useValue: 'es-ES' }],
   declarations: []
 })
-export class CoreModule { }
+export class CoreModule {}

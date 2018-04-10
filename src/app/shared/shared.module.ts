@@ -3,13 +3,23 @@ import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
-  MatFormFieldModule, MatListModule, MatCardModule, MatButtonModule, MatIconModule,
-  MatSelectModule, MatOptionModule, MatDialogModule
+  MatToolbarModule,
+  MatSidenavModule,
+  MatFormFieldModule,
+  MatListModule,
+  MatCardModule,
+  MatButtonModule,
+  MatIconModule,
+  MatSelectModule,
+  MatOptionModule,
+  MatDialogModule
 } from '@angular/material';
 
 
 @NgModule({
   imports: [
+    MatToolbarModule,
+    MatSidenavModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
@@ -21,10 +31,12 @@ import {
     MatIconModule,
     MatSelectModule,
     MatOptionModule,
-    MatDialogModule,
+    MatDialogModule
   ],
   declarations: [],
   exports: [
+    MatToolbarModule,
+    MatSidenavModule,
     CommonModule,
     FormsModule,
     MatCardModule,
@@ -35,7 +47,7 @@ import {
     MatIconModule,
     MatSelectModule,
     MatOptionModule,
-    MatDialogModule,
+    MatDialogModule
   ]
 })
-export class SharedModule { }
+export class SharedModule {}
