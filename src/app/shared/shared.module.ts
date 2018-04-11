@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatToolbarModule,
   MatSidenavModule,
+  MatMenuModule,
+  MatCheckboxModule,
   MatFormFieldModule,
   MatListModule,
   MatCardModule,
@@ -20,7 +21,8 @@ import {
   imports: [
     MatToolbarModule,
     MatSidenavModule,
-    CommonModule,
+    MatMenuModule,
+    MatCheckboxModule,
     FormsModule,
     ReactiveFormsModule,
     MatCardModule,
@@ -37,7 +39,8 @@ import {
   exports: [
     MatToolbarModule,
     MatSidenavModule,
-    CommonModule,
+    MatMenuModule,
+    MatCheckboxModule,
     FormsModule,
     MatCardModule,
     MatFormFieldModule,
