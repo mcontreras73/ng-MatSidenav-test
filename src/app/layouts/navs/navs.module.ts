@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
-import { NavbarComponent } from './navbar/navbar.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
+import { NavsComponent } from './navs/navs.component';
+import { NavbarComponent } from './navs-components/navbar/navbar.component';
+import { SidenavComponent } from './navs-components/sidenav/sidenav.component';
 
 import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
-  imports: [CommonModule, SharedModule],
-  declarations: [NavbarComponent, SidenavComponent],
-  exports: [NavbarComponent, SidenavComponent]
+  imports: [CommonModule, SharedModule, RouterModule],
+  declarations: [NavsComponent, NavbarComponent, SidenavComponent],
+  exports: [NavsComponent]
 })
 export class NavsModule {}

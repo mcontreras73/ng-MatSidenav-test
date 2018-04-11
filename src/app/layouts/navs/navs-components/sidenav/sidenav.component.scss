@@ -1,0 +1,11 @@
+$toolbar-height: 64px;
+
+.container-sidenav {
+  background-color: burlywood;
+  height: calc(100vh - #{$toolbar-height});
+}
+
+.container-sidenav-content {
+  background-color: aqua;
+  min-height: calc(100vh - #{$toolbar-height});
+}

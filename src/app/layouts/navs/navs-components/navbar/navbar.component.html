@@ -3,9 +3,18 @@
 
     <button mat-icon-button>
       <mat-icon aria-label="menu">menu</mat-icon>
-    </button> Abanca
+    </button>
+
+    <a routerLink="/" mat-icon-button>
+      <mat-icon aria-label="home">home</mat-icon>
+    </a>
+    Abanca
 
     <span class="fill-remaining-space"></span>
+
+    <a routerLink="sign-in" mat-button>
+      Sign in
+    </a>
 
     <button mat-button [matMenuTriggerFor]="menu1">Menu</button>
     <mat-menu #menu1="matMenu">
