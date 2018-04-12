@@ -7,7 +7,7 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 
 import { NavsModule } from './layouts/navs/navs.module';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app.routing';
 import { MainpageComponent } from './views/mainpage/mainpage.component';
 
 @NgModule({
