@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material';
 
+import { NavsService } from '../../services/navs.service';
+
 @Component({
   selector: 'acerca-sidenav',
   templateUrl: './sidenav.component.html',
@@ -9,16 +11,13 @@ import { MatSidenav } from '@angular/material';
 export class SidenavComponent implements OnInit {
   @ViewChild(MatSidenav) sidenav: MatSidenav;
 
-  constructor() {}
+  constructor(private navsService: NavsService) {}
 
   ngOnInit() {
-    console.log(this.sidenav.opened);
-    this.sidenav.open();
-    console.log(this.sidenav.opened);
+    this.navsService.setOpened$(this.sidenav.opened).subscribe(null);
   }
 
-  public aVer(algo: any) {
-    console.log(algo);
-    algo.toggle();
+  public miPrueba() {
+    this.sidenav.opened = !this.sidenav.opened;
   }
 }
