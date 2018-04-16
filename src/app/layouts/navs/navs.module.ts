@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { NavsService } from './services/navs.service';
 import { NavsComponent } from './navs/navs.component';
 import { NavbarComponent } from './navs-components/navbar/navbar.component';
 import { SidenavComponent } from './navs-components/sidenav/sidenav.component';
+import { NavsService } from './services/navs.service';
 
 import { SharedModule } from '../../shared/shared.module';
 

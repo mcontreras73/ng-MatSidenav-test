@@ -1,6 +1,9 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import {
-  ApiInformationRegistryConfigSimple, ApiRegistryModule, InformacionPuestoModule, EntornoModule,
+  ApiInformationRegistryConfigSimple,
+  ApiRegistryModule,
+  InformacionPuestoModule,
+  EntornoModule,
   ApplicationModule
 } from '@morphe/common';
 import { IntranetModule } from '@morphe/seguridad';

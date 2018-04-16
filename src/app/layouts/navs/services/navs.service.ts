@@ -1,23 +1,27 @@
 import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class NavsService {
-  private sidenavOpened: boolean;
+  private statusSidenav: boolean;
 
   constructor() {}
 
-  public setOpened$(status: boolean): Observable<boolean> {
-    this.sidenavOpened = status;
-    return of(this.sidenavOpened);
+  private statusSidenav$ = new Subject<boolean>();
+
+  public getStatusSidenav$(): Observable<boolean> {
+    return this.statusSidenav$.asObservable();
   }
 
-  public sidenavToggle$(): Observable<boolean> {
-    console.log(`Estoy en sidenavToggle en el servicio: ${this.sidenavOpened}`);
-    this.sidenavOpened = !this.sidenavOpened;
-    console.log(`Estoy en sidenavToggle en el servicio: ${this.sidenavOpened}`);
-    return of(this.sidenavOpened);
+  public setStatusSidenav(status: boolean) {
+    this.statusSidenav = status;
+    this.statusSidenav$.next(this.statusSidenav);
+  }
+
+  public toggleStatusSidenav() {
+    this.statusSidenav = !this.statusSidenav;
+    this.statusSidenav$.next(this.statusSidenav);
   }
 }

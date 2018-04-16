@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {}
 
-  public clickMenu() {
-    this.navsService.sidenavToggle$();
+  public hamburguerMenuClick(): void {
+    this.navsService.toggleStatusSidenav();
   }
 }
