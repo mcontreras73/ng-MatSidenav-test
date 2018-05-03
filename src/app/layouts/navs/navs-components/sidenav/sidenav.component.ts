@@ -29,10 +29,10 @@ export class SidenavComponent implements OnInit, OnDestroy {
     console.log('Estoy en makeSubscription');
     this.subscription = this.navsService
     .getStatusSidenav$()
-    .subscribe(this.toggleSidenav.bind(this));
+    .subscribe(this.toggleSidenav);
   }
 
-  private toggleSidenav(status) {
+  private toggleSidenav = status => {
     console.log('Ya recibí status');
     this.sidenav.opened = status;
   }
